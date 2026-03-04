@@ -8,11 +8,19 @@ import { Room } from '../models/room.model';
 export class RoomService {
 
   private rooms: Room[] = [
-    { id: 1, name: '101', type: 'Single', price: 100, available: true },
-    { id: 2, name: '102', type: 'Double', price: 150, available: true },
-    { id: 3, name: '103', type: 'Suite', price: 250, available: false },
-    { id: 4, name: '201', type: 'Single', price: 120, available: true },
-    { id: 5, name: '202', type: 'Double', price: 180, available: true }
+    { id: 1, name: '101', type: 'Single', price: 80, available: true },
+    { id: 2, name: '102', type: 'Single', price: 85, available: true },
+    { id: 3, name: '103', type: 'Single', price: 90, available: true },
+    
+    { id: 4, name: '201', type: 'Double', price: 120, available: true },
+    { id: 5, name: '202', type: 'Double', price: 130, available: true },
+    { id: 6, name: '203', type: 'Double', price: 135, available: true },
+    
+    { id: 7, name: '301', type: 'Suite', price: 200, available: true },
+    { id: 8, name: '302', type: 'Suite', price: 220, available: true },
+    { id: 9, name: '303', type: 'Suite', price: 240, available: true },
+    
+    { id: 10, name: '401', type: 'Suite', price: 260, available: true }
   ];
 
   constructor() {

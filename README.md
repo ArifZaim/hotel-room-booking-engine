@@ -1,64 +1,205 @@
-<<<<<<< HEAD
-# HotelBookingEngine
+# 🏨 Hotel Room Booking Engine
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
+A simple **Hotel Room Booking Engine** built with **Angular 17, TypeScript, RxJS, and Bootstrap**.
+The application allows users to view available hotel rooms and book them using a modal form with validation.
 
-## Development server
+---
 
-To start a local development server, run:
+# 🚀 Objective
 
-```bash
+This project demonstrates the ability to:
+
+* Build a responsive UI using **Angular and Bootstrap**
+* Implement **Angular Reactive Forms**
+* Use **component-based architecture**
+* Manage application state using **Angular services**
+* Simulate API calls using **RxJS**
+* Write **clean, reusable, and modular code**
+
+---
+
+# ✨ Features
+
+### 🛏 Room List Page
+
+Displays available hotel rooms with the following details:
+
+* Room Name (e.g., 101, 102, 103)
+* Room Type (Single, Double, Suite)
+* Room Price
+* Availability Status (Available / Booked)
+
+---
+
+### 📅 Book Room Modal
+
+Clicking **Book Room** opens a modal with a booking form.
+
+Form fields include:
+
+* Guest Name
+* Check-in Date
+* Check-out Date
+
+Validation rules:
+
+* All fields are required
+* Check-out date must be **after check-in date**
+
+---
+
+### ✅ Booking Confirmation
+
+After submitting the booking form:
+
+* A **success notification** is displayed
+* Room availability updates to **Booked**
+* The **Book Room button becomes disabled**
+
+---
+
+# ⭐ Bonus Features Implemented
+
+* Angular **Reactive Forms**
+* **Reusable RoomCardComponent**
+* **Bootstrap responsive layout**
+* **Room filtering by type**
+* **Custom form validation**
+* **Check-out date restriction**
+* **localStorage persistence**
+* **Loading spinner while fetching rooms**
+* **Success notification UI**
+
+---
+
+# 🛠 Tech Stack
+
+| Technology     | Purpose                      |
+| -------------- | ---------------------------- |
+| Angular 17     | Frontend Framework           |
+| TypeScript     | Strong typing                |
+| RxJS           | Simulating API responses     |
+| Bootstrap 5    | UI layout and styling        |
+| Reactive Forms | Form validation and handling |
+| LocalStorage   | Persist booking state        |
+
+---
+
+# 📂 Project Structure
+
+```
+src/app
+
+models
+ └ room.model.ts
+
+services
+ └ room.ts
+
+rooms
+ ├ room-list
+ │ ├ room-list.ts
+ │ ├ room-list.html
+ │ └ room-list.scss
+ │
+ └ book-room-modal
+   ├ book-room-modal.ts
+   ├ book-room-modal.html
+   └ book-room-modal.scss
+
+shared
+ └ room-card
+   ├ room-card.ts
+   ├ room-card.html
+   └ room-card.scss
+```
+
+This modular architecture separates:
+
+* **Data models**
+* **Business logic**
+* **UI components**
+* **Reusable components**
+
+---
+
+# 📡 Mock API
+
+The project simulates an API using **RxJS `of()`** inside the service layer.
+
+Example:
+
+```typescript
+getRooms(): Observable<Room[]> {
+  return of(this.rooms);
+}
+```
+
+This mimics fetching room data from a backend.
+
+---
+
+# 💾 Booking Persistence
+
+Bookings are stored using **localStorage**, allowing room status to remain booked after refreshing the page.
+
+Example:
+
+```typescript
+localStorage.setItem('rooms', JSON.stringify(this.rooms));
+```
+
+---
+
+# 📱 Responsive Design
+
+The application uses **Bootstrap Grid** to ensure the UI works across devices:
+
+* Desktop
+* Tablet
+* Mobile
+
+---
+
+# ▶️ Running the Project
+
+Install dependencies:
+
+```
+npm install
+```
+
+Start the development server:
+
+```
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open the application in your browser:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+# 📸 Application Workflow
 
-## Building
+1. View the list of available hotel rooms
+2. Filter rooms by type
+3. Click **Book Room**
+4. Fill in booking details
+5. Submit the form
+6. Receive confirmation notification
+7. Room status updates to **Booked**
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+# 👨‍💻 Author
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+**Muhammad Arif Zaim Zailani**
 
-## Running unit tests
+Frontend Developer (Angular)
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-=======
-# hotel-room-booking-engine
-Angular Hotel Room Booking Engine (Technical Assessment)
->>>>>>> c49a82f6764bc6f58ed55ad67fee736bd353f3d2
+GitHub:
+https://github.com/ArifZaim

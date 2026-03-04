@@ -1,0 +1,38 @@
+<div class="card shadow-sm">
+
+  <div class="card-body">
+
+    <h5 class="card-title">Room {{ room.name }}</h5>
+
+    <p class="card-text">
+      Type: {{ room.type }}
+    </p>
+
+    <p class="card-text">
+      Price: ${{ room.price }}
+    </p>
+
+    <p>
+      Status:
+
+      <span *ngIf="room.available" class="badge bg-success">
+        Available
+      </span>
+
+      <span *ngIf="!room.available" class="badge bg-danger">
+        Booked
+      </span>
+
+    </p>
+
+    <button
+      class="btn btn-primary"
+      [disabled]="!room.available"
+      (click)="bookRoom()"
+    >
+      Book Room
+    </button>
+
+  </div>
+
+</div>

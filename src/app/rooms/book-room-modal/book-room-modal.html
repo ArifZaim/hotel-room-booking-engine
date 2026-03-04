@@ -1,0 +1,109 @@
+<div class="modal fade show d-block">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <form
+        [formGroup]="bookingForm"
+        (ngSubmit)="confirmBooking()"
+      >
+
+        <div class="modal-header">
+          <h5 class="modal-title">Book Room</h5>
+
+          <button
+            type="button"
+            class="btn-close"
+            (click)="close()">
+          </button>
+        </div>
+
+
+        <div class="modal-body">
+
+          <!-- Guest Name -->
+
+          <div class="mb-3">
+
+            <label class="form-label">Guest Name</label>
+
+            <input
+              type="text"
+              class="form-control"
+              formControlName="guestName"
+            >
+
+          </div>
+
+
+          <!-- Check In -->
+
+          <div class="mb-3">
+
+            <label class="form-label">Check-in Date</label>
+
+            <input
+              type="date"
+              class="form-control"
+              formControlName="checkIn"
+            >
+
+          </div>
+
+
+          <!-- Check Out -->
+
+          <div class="mb-3">
+
+            <label class="form-label">Check-out Date</label>
+
+            <input
+              type="date"
+              class="form-control"
+              formControlName="checkOut"
+              [min]="bookingForm.get('checkIn')?.value"
+            >
+
+          </div>
+
+
+          <!-- Error message -->
+
+          <div
+            *ngIf="bookingForm.errors?.['invalidDateRange']"
+            class="text-danger">
+
+            Check-out date must be after check-in date.
+
+          </div>
+
+        </div>
+
+
+        <div class="modal-footer">
+
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="close()">
+
+            Cancel
+
+          </button>
+
+
+          <button
+            type="submit"
+            class="btn btn-success"
+            [disabled]="bookingForm.invalid">
+
+            Confirm Booking
+
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>

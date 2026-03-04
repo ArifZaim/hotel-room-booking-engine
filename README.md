@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # HotelBookingEngine
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
@@ -57,3 +58,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+=======
+# hotel-room-booking-engine
+Angular Hotel Room Booking Engine (Technical Assessment)
+>>>>>>> c49a82f6764bc6f58ed55ad67fee736bd353f3d2
